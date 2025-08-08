@@ -1,75 +1,95 @@
-# Nuxt Minimal Starter
+# 📚 Blog Viewer - Nuxt 4
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Project sederhana ini dibuat untuk menampilkan daftar blog dari API menggunakan **Nuxt 4** dan **Tailwind CSS**. Cocok sebagai bahan ajar untuk belajar:
 
-## Setup
+- Struktur dasar Nuxt 4
+- Routing dinamis (`pages/[id].vue`)
+- Fetching data dengan `useFetch`
+- Desain responsif dengan Tailwind CSS
 
-Make sure to install dependencies:
+---
+
+## 🚀 Fitur
+
+- Menampilkan daftar blog dari JSONPlaceholder
+- Routing dinamis ke halaman detail tiap post
+- Tampilan yang sudah didesain ulang agar lebih menarik
+- Loading state & error handling
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- [Nuxt 4](https://nuxt.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [JSONPlaceholder API](https://jsonplaceholder.typicode.com)
+
+---
+
+## 🧱 Struktur Folder
 
 ```bash
-# npm
+.
+├── app.vue
+├── components/
+│   └── PostCard.vue         # Komponen kartu blog
+├── pages/
+│   ├── index.vue            # Halaman daftar blog
+│   └── posts/
+│       └── [id].vue         # Halaman detail blog (routing dinamis)
+├── public/
+│   └── favicon.ico, robots.txt
+├── assets/
+│   └── css/main.css         # (Opsional) Gaya global
+├── nuxt.config.ts           # Konfigurasi Nuxt
+├── tailwind.config.js       # Konfigurasi Tailwind
+├── package.json
+└── README.md
+```
+
+---
+
+## 📦 Instalasi & Menjalankan
+
+1. **Clone repo**
+```bash
+git clone git@github.com:PrayudhaIbnu/blog-viewer.git
+cd blog-viewer
+```
+
+2. **Install dependency**
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+3. **Jalankan development server**
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+4. Akses di browser:
+```
+http://localhost:3000
 ```
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 💡 Catatan Pembelajaran
 
-# pnpm
-pnpm preview
+- Menggunakan `useFetch()` secara `async/await` untuk SSR/CSR otomatis
+- Pemanfaatan `<NuxtLink>` untuk navigasi antar halaman
+- Styling interaktif menggunakan Tailwind (hover, transition, responsive grid)
+- Penggunaan `defineProps()` untuk komponen
 
-# yarn
-yarn preview
+---
 
-# bun
-bun run preview
-```
+## 📚 API Referensi
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Semua data diambil dari:
+[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
+
+---
+
+## 📝 Lisensi
+
+MIT License © 2025 - [Prayudha Ibnu](https://github.com/PrayudhaIbnu)
